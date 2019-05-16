@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: '', redirectTo: 'apod', pathMatch: 'full' },
+  { path: 'apod', loadChildren: './apod/apod.module#ApodPageModule' },
+  { path: 'apod/:date', loadChildren: './apod/apod.module#ApodPageModule' },
 ];
 
 @NgModule({
