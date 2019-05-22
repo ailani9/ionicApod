@@ -11,9 +11,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgApodConfig } from '../../../ng-apod/config/ng-apod.config';
-// import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,8 +24,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       IonicModule.forRoot(), 
       AppRoutingModule,
       HttpClientModule,
-      ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-      // ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+      ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
     ],
 
   providers: 
